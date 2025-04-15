@@ -1,0 +1,26 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+    &__container{
+        position: absolute;
+        top: 20px;
+        right: 30px;
+    }
+
+    &__links{
+        display: flex;
+        gap: 30px;
+        
+        &__item{
+            margin: 0;
+            
+            a {
+                text-decoration: none;
+                list-style: none;
+            }
+        }
+    }
+}
