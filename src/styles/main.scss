@@ -1,3 +1,68 @@
+@use 'variaveis';
+@use 'header';
+@use 'home';
+@use 'personagens';
+// RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Avenir, sans-serif;
+    list-style: none;
+}
+
 body{
-    background-color: red;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+// MIXINS
+@mixin text($fontSize: 16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoPrincipal;
+}
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+    color: variaveis.$corTextoPrincipal;
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+// CLASSES DOS MIXINS 
+.text--big {
+    @include text(18px);
+    // @media (max-width: 768px) {
+    //     @include text(15px)
+    // }
+}
+.text {
+    @include text;
+
+    // @media (max-width: 768px) {
+    //     @include text(14px)
+    // }
+}
+.text--small {
+    @include text(12px);
+
+    // @media (max-width: 768px) {
+    //     @include text(11px)
+    // }
+}
+// ***********************
+.title--big{
+    @include title(60px);
+    
+}
+.title{
+    @include title;
+
+}
+.title--small{
+    @include title(22px);
+    
+    // @media (max-width: 768px){
+    //     @include title(22px);
+    // }
 }

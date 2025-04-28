@@ -1,0 +1,42 @@
+.personagens {
+    padding: 4rem 2rem;
+    background: #05130a;
+    color: #fff;
+    text-align: center;
+
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+
+
+        &__card {
+            background: #1d2d15;
+            padding: 1.5rem;
+            border-radius: 10px;
+            width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+            img {
+                width: 200px;
+                height: 250px;
+                object-fit: cover;
+            }
+    
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 0.5rem;
+            }
+    
+            &:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 8px 20px rgba(96, 165, 32, 0.3);
+            }
+        }
+    }
+
+}
