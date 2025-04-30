@@ -2,6 +2,7 @@
 @use 'header';
 @use 'home';
 @use 'personagens';
+@use 'temporadas';
 // RESET
 * {
     margin: 0;
@@ -30,31 +31,13 @@ body{
 }
 
 // CLASSES DOS MIXINS 
-.text--big {
-    @include text(18px);
-    // @media (max-width: 768px) {
-    //     @include text(15px)
-    // }
-}
+
 .text {
     @include text;
-
-    // @media (max-width: 768px) {
-    //     @include text(14px)
-    // }
 }
-.text--small {
-    @include text(12px);
 
-    // @media (max-width: 768px) {
-    //     @include text(11px)
-    // }
-}
 // ***********************
-.title--big{
-    @include title(60px);
-    
-}
+
 .title{
     @include title;
 
@@ -62,7 +45,4 @@ body{
 .title--small{
     @include title(22px);
     
-    // @media (max-width: 768px){
-    //     @include title(22px);
-    // }
 }
