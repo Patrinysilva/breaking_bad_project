@@ -3,6 +3,7 @@
 @use 'home';
 @use 'personagens';
 @use 'temporadas';
+@use 'footer';
 // RESET
 * {
     margin: 0;
@@ -40,9 +41,15 @@ body{
 
 .title{
     @include title;
+    @media (max-width: 768px){
+        font-size: 30px;
+
+    }
 
 }
 .title--small{
     @include title(22px);
-    
+    @media (max-width: 768px) {
+        font-size: 15px;
+    }
 }
